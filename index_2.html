@@ -5790,9 +5790,9 @@ html[data-theme="dark"] .ld-veh__photo { mix-blend-mode: normal; }
     setTimeout(function () { toast.hidden = true; toast.classList.remove("is-leaving"); }, 200);
   }
 
-  /* ---------- After the first lead, a fresh one keeps arriving every 15 s ----------
+  /* ---------- After the first lead, a fresh one keeps arriving every 2 min ----------
      Built from the shippers / vehicles / routes already shown in the prototype. */
-  var EVERY = 15000, nextId = 6194;
+  var EVERY = 120000, nextId = 6194;
   var pool = (function () {
     var rows = $$('[data-view="quotes"] .table[data-state="default"] .row[data-id]');
     return rows.map(function (r) {
