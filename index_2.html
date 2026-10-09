@@ -3615,6 +3615,11 @@ html[data-theme="dark"] .od-banner { background: #14264a; border-bottom-color: #
 .table--orders .route__line > .t--muted { flex: none; }
 .table--orders .route { width: 100%; min-width: 0; }
 html[data-theme="dark"] .toast__msg { color: #2c2d2e; }
+/* the "New lead" toast (z 70) sat over the avatar and the account menu (z 45): Profile could not be clicked.
+   Popovers open above it, and the toast starts below the top bar. */
+.hm-pop { z-index: 75; }
+@media (min-width: 768px) { .ntoast { top: 112px; } }
+@media (max-width: 767px) { .ntoast { top: 100px; } }
 /* tab rows never push the page wider than the screen: they scroll sideways instead */
 .page-header .tabs { max-width: 100%; overflow-x: auto; scrollbar-width: none; flex-wrap: nowrap; }
 .page-header .tabs::-webkit-scrollbar { display: none; }
